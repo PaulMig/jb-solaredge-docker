@@ -3,7 +3,7 @@ MAINTAINER jshank@theshanks.net
 
 ENV LANG C.UTF-8
 ENV MONITOR_IFACE rename2
-#ENV INVERTER_IP 192.168.178.31
+ENV INVERTER_IP 192.168.178.31
 ENV MQTT_SERVER 192.168.178.101
 
 RUN set -x && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
