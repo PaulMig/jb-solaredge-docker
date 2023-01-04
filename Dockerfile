@@ -24,6 +24,9 @@ RUN pip install -r requirements.txt
 # Install paho-mqtt if you are using se2mqtt.py
 RUN pip install paho-mqtt
 
+# Install future ImportError: No module named builtins
+RUN pip install future
+
 # Make our persistant data directory
 RUN mkdir data
 VOLUME /solaredge/data
