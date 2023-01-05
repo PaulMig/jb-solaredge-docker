@@ -35,4 +35,4 @@ VOLUME /solaredge/data
 # you are using to store your data
 
 #CMD tcpdump -i $MONITOR_IFACE -s 65535 -w - tcp and host $INVERTER_IP  | python /solaredge/semonitor.py -vvv | tee /solaredge/data/output.json | python /solaredge/conversion/se2state.py -i /solaredge/data/output.json -o /solaredge/data/solar.json
-CMD tcpdump -i $MONITOR_IFACE -s 65535 -w - tcp and host $INVERTER_IP | python /solaredge/semonitor.py -vvv | python /solaredge/conversion/se2MQTT.py -c solaredge -u solaredge -p 'sup3rs3cret' -s $MQTT_SERVER -t tele/solaredge
+#CMD tcpdump -i $MONITOR_IFACE -s 65535 -w - tcp and host $INVERTER_IP | python /solaredge/semonitor.py -vvv | python /solaredge/conversion/se2MQTT.py -c solaredge -u solaredge -p 'sup3rs3cret' -s $MQTT_SERVER -t tele/solaredge
